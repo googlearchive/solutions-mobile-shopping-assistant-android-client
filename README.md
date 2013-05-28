@@ -21,19 +21,16 @@ This sample source code and project is designed to work with Eclipse. It was tes
 ### Prerequisite
 1. Eclipse with [Google Plugin for Eclipse](https://developers.google.com/eclipse/docs/getting_started) and [Android Development Tools](http://developer.android.com/tools/sdk/eclipse-adt.html) with Google API Level 16 or higher installed.
 
-## Download Instruction
-You can download this sample [here](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-android-client). After the download finishes, unzip the files and import the projects into Eclipse.
-
 ## Developer Guide using Eclipse
-1. Follow the steps in README.md for [Mobile Shopping Assistant Backend - Java](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-backend-java) to configure and deploy the mobile backend needed for this client app.
+1. Follow the steps in README.md for [Mobile Shopping Assistant - Java](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-backend-java) to configure and deploy the mobile backend needed for this client app.
 
-2. Open MobileAssistant/src/com/google/sample/mobileassistant/SignInActivity.java and update *AUDIENCE* variable with your *WEB_CLIENT_ID*.
+2. Select MobileAssistant-AppEngine project in "Project Explorer" and from Google context menu select Generate Cloud Endpoint client library. This should create endpoint-libs folder in MobileAssistant project. If it didn't then copy endpoints-libs from MobileAssistant-AppEngine project to MobileAssistant project.
 
-3. Open MobileAssistant/src/com/google/sample/mobileassistant/GCMIntentService.java and update *GCM_PROJECT_ID* variable with your Google Cloud Console Project Id.
+3. Open MobileAssistant/src/com/google/sample/mobileassistant/SignInActivity.java and update *AUDIENCE* variable with your *WEB_CLIENT_ID*.
 
-4. Add Google Play Services by following the Setup Google Play Services SDK section from [Android documentation](https://developer.android.com/google/play-services/setup.html).
+4. Open MobileAssistant/src/com/google/sample/mobileassistant/GCMIntentService.java and update *GCM_PROJECT_ID* variable with your Google Cloud Console Project Id.
 
-5. Connect your Android device with [USB debugging enabled](http://developer.android.com/tools/device.html), select MobileAssistant project and run it. 
+5. Add Google Play Services by following the Setup Google Play Services SDK section from [Android documentation](https://developer.android.com/google/play-services/setup.html).
+Make sure that google-play-services.lib is referenced by MobileAsistant project (select MobileAssistatn project in Project Explorer, choose Properties from the context menu and select Android node in the left panel. If google-play-services.lib is not listed as a library then click Add and choose google-play-services.lib and click OK).
 
-6. If you don't have a physical Android device available, you can test a subset of the app funcionality on Android emulator with Google API level 17 or higher, but first you need to edit MobileAssistant/src/com/google/sample/mobileassistant/SignInActivity.java and change SIGN_IN_REQUIRED constant to false. 
-
+6. Connect your Android device with [USB debugging enabled](http://developer.android.com/tools/device.html), select MobileAssistant project and run it.
