@@ -7,7 +7,7 @@ For new work on this check out [MobileShoppingAssistant](https://github.com/Goog
 # Mobile Shopping Assistant Android Client
 
 ## Copyright
-Copyright 2013 Google Inc. All Rights Reserved.
+Copyright 2014 Google Inc. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
